@@ -6,14 +6,19 @@ body {
     height: 100vh;
     flex-direction: column;
     margin: 0;
+    overflow: hidden; /* ป้องกันการเลื่อนหน้าจอ */
 }
 
 .container {
     text-align: center;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 5em; /* ทำให้ตัวหนังสือใหญ่ขึ้น */
+    font-weight: bold;
     color: black;
     opacity: 1;
     transform: translateY(50px);
@@ -34,12 +39,16 @@ h1 {
 }
 
 img {
-    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* รูปเต็มหน้าจอ */
+    height: 100vh;
+    object-fit: cover; /* ป้องกันรูปเสียสัดส่วน */
     opacity: 0;
     transition: opacity 3s ease-in-out;
 }
 
 audio {
-    margin-top: 10px;
     display: none;
 }
